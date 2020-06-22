@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>reminders</title>
+
+{% endblock %}
+
+{% block content %}
+    {% for remind in reminders %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ remind.author }}</a>
+            </div>
+            <h2><a class="article-title" href="#">{{ remind.title }}</a></h2>
+            <p class="article-content">{{ remind.content }}</p>
+            
+          </div>
+        </article>
+    {% endfor %}
+{% endblock  %}
+
+
+
+
+
+
+
